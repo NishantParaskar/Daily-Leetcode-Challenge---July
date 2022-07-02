@@ -1,1 +1,1 @@
-Daily Leetcode Challenge - Day 1
+DAY 2
