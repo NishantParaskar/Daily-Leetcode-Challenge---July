@@ -1,0 +1,15 @@
+class Solution {
+public:
+    vector<int> singleNumber(vector<int>& nums) {
+        unsigned ans=0;
+        for(int i=0;i<nums.size();i++) ans^=nums[i];
+        unsigned res=ans & (-ans);
+        vector<int>re(2,0);
+        for(auto x:nums){
+            if((res & x)==0)re[0]^=x;
+            else re[1]^=x;
+            
+        }
+        return re;
+    }
+};
